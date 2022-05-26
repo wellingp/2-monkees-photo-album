@@ -1,0 +1,117 @@
+body{
+   font-size: 1rem;
+   align-items: center;
+   align-content: center;
+   text-align: center;
+   background-color: orange;
+   background-image: url('../images/body-wallpaper.jpg');
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   margin-left: 0;
+   margin-right: 0;
+   width: 100%;
+}
+
+button, main{
+   margin-bottom: 2%;
+}
+
+.container{
+
+}
+
+.row{
+
+}
+
+.col{
+
+}
+
+header{
+
+}
+
+#logo{
+   max-width: 40%;
+   height: auto;
+}
+
+main{
+
+}
+
+#collector-box{
+   border: dashed red 1px;
+   background-color: white;
+}
+
+table{
+   width: 50%;
+   display: inline-table;
+   border-collapse: collapse;
+   empty-cells: show;
+   margin-bottom: 4%;
+}
+
+td{
+   border: solid 1px yellow;
+   padding: 12%;
+}
+
+.davy{
+   background-color: #D6D8F1;
+   color: #D6D8F1;
+}
+
+.mike{
+   background-color: #FB7E3E;
+   color: #FB7E3E;
+}
+
+.peter{
+   background-color: #F4EB37;
+   color: #F4EB37;
+}
+
+.micky{
+   background-color: #BDD63A;
+   color: #BDD63A;
+}
+
+footer{
+
+}
+
+img{
+
+}
+
+h1, h2, h3, h4, h5, h6{
+
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
+
+h6{
+
+}

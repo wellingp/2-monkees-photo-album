@@ -3,8 +3,7 @@ body{
    align-items: center;
    align-content: center;
    text-align: center;
-   background-color: orange;
-   background-image: url('../images/body-wallpaper.jpg');
+   background-color: #E7E6E5;
    background-position: center;
    background-size: cover;
    background-attachment: fixed;
@@ -13,7 +12,7 @@ body{
    width: 100%;
 }
 
-button, main{
+button, main, h1{
    margin-bottom: 2%;
 }
 
@@ -34,7 +33,7 @@ header{
 }
 
 #logo{
-   max-width: 40%;
+   max-width: 100%;
    height: auto;
 }
 
@@ -43,8 +42,7 @@ main{
 }
 
 #collector-box{
-   border: dashed red 1px;
-   background-color: white;
+   
 }
 
 table{
@@ -53,6 +51,7 @@ table{
    border-collapse: collapse;
    empty-cells: show;
    margin-bottom: 4%;
+   background-color: white;
 }
 
 td{

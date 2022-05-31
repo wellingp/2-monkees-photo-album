@@ -11,6 +11,7 @@ body{
    margin-left: 0;
    margin-right: 0;
    width: 100%;
+   font-family: 'Source Serif Pro', serif;
 }
 
 button, main, h1{
@@ -71,6 +72,10 @@ td:hover{
    background-image: url(../images/davy-bird.png);
    background-size: 100%;
    color: #D6D8F1;
+}
+
+.davy-picture{
+   background-color: yellow;
 }
 
 .mike{

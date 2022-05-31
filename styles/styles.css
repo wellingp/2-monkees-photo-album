@@ -4,6 +4,7 @@ body{
    align-content: center;
    text-align: center;
    background-color: #E7E6E5;
+   background-image: url(../images/body-wallpaper.jpg);
    background-position: center;
    background-size: cover;
    background-attachment: fixed;
@@ -35,6 +36,7 @@ header{
 #logo{
    max-width: 100%;
    height: auto;
+   margin-bottom: 0;
 }
 
 main{
@@ -50,32 +52,45 @@ table{
    display: inline-table;
    border-collapse: collapse;
    empty-cells: show;
-   margin-bottom: 4%;
+   margin-top: 0;
    background-color: white;
+   box-shadow: 5px 0 10px rgb(162, 159, 139);
 }
 
 td{
-   border: solid 1px yellow;
+   border: solid 5px rgb(222, 211, 195);
    padding: 12%;
 }
 
+td:hover{
+   opacity: 50%;
+}
+
 .davy{
-   background-color: #D6D8F1;
+   background-color: #d4692c;
+   background-image: url(../images/davy-bird.png);
+   background-size: 100%;
    color: #D6D8F1;
 }
 
 .mike{
-   background-color: #FB7E3E;
+   background-color: #c18959;
+   background-image: url(../images/nez-flower.png);
+   background-size: 100%;
    color: #FB7E3E;
 }
 
 .peter{
-   background-color: #F4EB37;
+   background-color: #462210;
+   background-image: url(../images/peter-shelf.png);
+   background-size: 100%;
    color: #F4EB37;
 }
 
 .micky{
-   background-color: #BDD63A;
+   background-color: #8F2728;
+   background-image: url(../images/micky-balloon.png);
+   background-size: 100%;
    color: #BDD63A;
 }
 

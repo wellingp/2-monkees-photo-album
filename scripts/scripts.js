@@ -1,9 +1,6 @@
-let davySquare = document.querySelectorAll('.davy');
 
-davySquare.forEach
-
-davySquare.addEventListener('click', showDavy);
-
-function showDavy(){
-   davySquare.classList.toggle('.davy-picture');
-}
+document.getElementsByClassName(".davy").forEach(function(element) {
+	element.addEventListener('click', function() {
+		alert('working?')
+	});
+});

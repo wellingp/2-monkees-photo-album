@@ -71,11 +71,37 @@ td:hover{
    background-color: #d4692c;
    background-image: url(../images/davy-bird.png);
    background-size: 100%;
-   color: #D6D8F1;
 }
 
 .davy-picture{
-   background-color: yellow;
+   background-image: url(../images/davy-bird.png);
+   background-size: 100%;
+   animation-name: show-davy;
+   animation-duration: 5s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes show-davy{
+   
+   0%{
+      background-image: url(../images/davy-bird.png);
+      opacity: 100%;
+   }
+   25%{
+      background-image: url(../images/davy-bird.png);
+      opacity: 75%;
+   }
+   50%{
+      background-image: url(../images/davy-bird.png);
+      opacity: 50%;
+   }
+   75%{
+      background-image: url(../images/davy-bird.png);
+      opacity: 25%;
+   }
+   100%{
+      background-image: url(../images/test-square.jpg);
+   }
 }
 
 .mike{

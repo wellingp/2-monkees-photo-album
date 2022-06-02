@@ -74,10 +74,11 @@ td:hover{
 }
 
 .davy-picture{
+   background-color: #d4692c;
    background-image: url(../images/davy-bird.png);
    background-size: 100%;
    animation-name: show-davy;
-   animation-duration: 5s;
+   animation-duration: 0.5s;
    animation-fill-mode: forwards;
 }
 
@@ -100,7 +101,7 @@ td:hover{
       opacity: 25%;
    }
    100%{
-      background-image: url(../images/test-square.jpg);
+      background-image: url(../images/davy-face.jpg);
    }
 }
 

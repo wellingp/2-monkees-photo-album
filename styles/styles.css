@@ -82,6 +82,8 @@ td:hover{
    animation-fill-mode: forwards;
 }
 
+/*Maybe try adding a flip effect when the square is clicked???*/
+
 @keyframes show-davy{
    
    0%{

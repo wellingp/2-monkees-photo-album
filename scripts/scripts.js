@@ -4,17 +4,27 @@ let mike = document.getElementsByClassName("mike");
 let micky = document.getElementsByClassName("micky");
 let peter = document.getElementsByClassName("peter");
 
-let davyBox = document.querySelector('td.davy');
-let mikeBox = document.querySelector('td.mike');
-let mickyBox = document.querySelector('td.micky');
-let peterBox = document.querySelector('td.peter');
+let h1 = document.querySelector('h1');
 
-function addDavyListener(){
-	for(var i = 0; i < davy.length; i++) {
-		davy[i].addEventListener('click', function changePicture(){
-			this.classList.toggle('davy-picture');
+function addListener(whichMonkee, whichClass, whichMessage){
+	for(var i = 0 ; i < 4 ; i++) {
+		whichMonkee[i].addEventListener('click', function changePicture(){
+			
+			for(i = 0 ; i < 4 ; i++){
+				whichMonkee[i].classList.toggle(whichClass);
+				h1.textContent = whichMessage;
+				h1.style.color = '#BDD63A';
+				h1.style.fontWeight = 'bold';
+				h1.style.fontSize = '2.2em'
+			}
 		});
 	}
 }
 
-addDavyListener();
+// Find a way to reset squares.
+
+addListener(davy, 'davy-picture', 'How fab, it\'s Davy!');
+addListener(mike, 'mike-picture', 'Groovy! Mike is where it\'s at!');
+addListener(micky, 'micky-picture', 'Cool! You dig Micky!');
+addListener(peter, 'peter-picture', 'Man, that\'s Peter!');
+

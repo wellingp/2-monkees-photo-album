@@ -5,6 +5,7 @@ let micky = document.getElementsByClassName("micky");
 let peter = document.getElementsByClassName("peter");
 
 let h1 = document.querySelector('h1');
+let h2 = document.querySelector('h2');
 
 function addListener(whichMonkee, whichClass, whichMessage){
 	for(var i = 0 ; i < 4 ; i++) {
@@ -15,8 +16,10 @@ function addListener(whichMonkee, whichClass, whichMessage){
 				h1.textContent = whichMessage;
 				h1.style.color = '#BDD63A';
 				h1.style.fontWeight = 'bold';
-				h1.style.fontSize = '2.2em'
+				h1.style.fontSize = '2.2em';
+				h2.style.visibility = 'hidden';
 			}
+
 		});
 	}
 }

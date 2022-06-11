@@ -7,8 +7,13 @@ let peter = document.getElementsByClassName("peter");
 let h1 = document.querySelector('h1');
 let h2 = document.querySelector('h2');
 
+//THE ISSUE: THE ARRAY PRODUCED IS NOT A STRING, CAN'T USE STRING METHODS ON IT
+
 var otherMonkees = document.querySelectorAll('td');
-var otherMonkeesArray = Array.from(otherMonkees);
+var otherMonkeesArray = Array.prototype.slice.call(otherMonkees);
+
+var resetMonkees = otherMonkeesArray.filter(boxtds => boxtds == 'td.davy');
+console.log(otherMonkeesArray, 'filtered results:', resetMonkees);
 
 function addListener(whichMonkee, whichClass, whichMessage, reset){
 	for(var i = 0 ; i < 4 ; i++) {
@@ -24,14 +29,6 @@ function addListener(whichMonkee, whichClass, whichMessage, reset){
 			}
 
 			//Error: not defined for the below.
-
-			var resetMonkees = otherMonkeesArray.filter(monkeeFilter);
-
-			function monkeeFilter(monkee){
-				return monkee.classList !== whichMonkee;
-			}
-
-			
 
 			
 
@@ -51,4 +48,17 @@ addListener(davy, 'davy-picture', 'How fab, it\'s Davy!', davy);
 addListener(mike, 'mike-picture', 'Groovy! Mike is where it\'s at!', mike);
 addListener(micky, 'micky-picture', 'Cool! You dig Micky!', micky);
 addListener(peter, 'peter-picture', 'Man, that\'s Peter!', peter);
+
+
+
+//ARRAY FILTERING
+
+// let experiment = ['td.davy', 'td.davy-picture', 'td.mike', 'td.peter', 'td.micky', 'td.mike-picture', 'td.peter-picture', 'td.micky-picture'];
+
+// //more than 8 characters are the face pictures
+// //less than 8 are the reset
+
+// const result = experiment.filter(word => word.length > 8);
+
+// console.log(result);
 

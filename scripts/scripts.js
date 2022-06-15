@@ -9,11 +9,24 @@ let h2 = document.querySelector('h2');
 
 //THE ISSUE: THE ARRAY PRODUCED IS NOT A STRING, CAN'T USE STRING METHODS ON IT
 
-var otherMonkees = document.querySelectorAll('td');
-var otherMonkeesArray = Array.prototype.slice.call(otherMonkees);
+//HTML COLLECTION
+var otherMonkeesClass = document.getElementsByClassName('othertd');
+//NODE LIST
+var otherMonkeesNodes = document.querySelectorAll('td');
 
-var resetMonkees = otherMonkeesArray.filter(boxtds => boxtds == 'td.davy');
-console.log(otherMonkeesArray, 'filtered results:', resetMonkees);
+console.log(otherMonkeesNodes.innerHTML);
+//ARRAY
+var otherMonkeesArray = Array.from(otherMonkeesClass);
+//STRING OF HTMLTABLECELLELEMENT
+var otherMonkeesString = otherMonkeesClass.toString();
+
+// var resetMonkees = otherMonkeesString.filter(boxtds => boxtds == 'td.davy');
+
+console.log('otherMonkeesClass', otherMonkeesClass);
+console.log('otherMonkeesNodes', otherMonkeesNodes);
+console.log('otherMonkeesArray', otherMonkeesArray);
+console.log('string: ', otherMonkeesString);
+/*console.log('filtered results:', resetMonkees);*/
 
 function addListener(whichMonkee, whichClass, whichMessage, reset){
 	for(var i = 0 ; i < 4 ; i++) {

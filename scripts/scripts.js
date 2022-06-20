@@ -10,59 +10,72 @@ let h2 = document.querySelector('h2');
 //THE ISSUE: THE ARRAY PRODUCED IS NOT A STRING, CAN'T USE STRING METHODS ON IT
 
 //HTML COLLECTION
-var otherMonkeesClass = document.getElementsByClassName('othertd');
+//var otherMonkeesClass = document.getElementsByClassName('othertd');
 //NODE LIST
-var otherMonkeesNodes = document.querySelectorAll('td');
+//var otherMonkeesNodes = document.querySelectorAll('td');
 
-console.log(otherMonkeesNodes.innerHTML);
+//console.log(otherMonkeesNodes.innerHTML);
 //ARRAY
-var otherMonkeesArray = Array.from(otherMonkeesClass);
+//var otherMonkeesArray = Array.from(otherMonkeesClass);
 //STRING OF HTMLTABLECELLELEMENT
-var otherMonkeesString = otherMonkeesClass.toString();
+//var otherMonkeesString = otherMonkeesClass.toString();
 
 // var resetMonkees = otherMonkeesString.filter(boxtds => boxtds == 'td.davy');
 
-console.log('otherMonkeesClass', otherMonkeesClass);
-console.log('otherMonkeesNodes', otherMonkeesNodes);
-console.log('otherMonkeesArray', otherMonkeesArray);
-console.log('string: ', otherMonkeesString);
+//console.log('otherMonkeesClass', otherMonkeesClass);
+//console.log('otherMonkeesNodes', otherMonkeesNodes);
+//console.log('otherMonkeesArray', otherMonkeesArray);
+//console.log('string: ', otherMonkeesString);
 /*console.log('filtered results:', resetMonkees);*/
 
-function addListener(whichMonkee, whichClass, whichMessage, reset){
-	for(var i = 0 ; i < 4 ; i++) {
-		whichMonkee[i].addEventListener('click', function changePicture(){
-			
-			for(i = 0 ; i < 4 ; i++){
-				whichMonkee[i].classList.toggle(whichClass);
-				h1.textContent = whichMessage;
+
+function addDavy(){
+	for(var i = 0 ; i < 5 ; i++) {
+		davy[i].addEventListener('click', function changePicture(){
+			for(var i = 0 ; i < 5 ; i++) {
+				davy[i].classList.toggle('davy-picture');
+				h1.textContent = 'How fab, it\'s Davy!';
 				h1.style.color = '#BDD63A';
 				h1.style.fontWeight = 'bold';
 				h1.style.fontSize = '2.2em';
 				h2.style.visibility = 'hidden';
 			}
-
-			//Error: not defined for the below.
-
-			
-
-			// if (otherMonkees[key] == whichMonkee){
-			// 	for(i = 0 ; i < 12 ; i++){
-			// 		otherMonkees[i].classList.toggle(reset);
-			// 	}
-			// }
-
 		});
+	}
+
+	for(var ii = 0 ; ii < 5 ; ii++) {
+		mike[ii].classList.toggle('mike');
 	}
 }
 
+function addMike(){
+	for(var x = 0 ; x < 5 ; x++) {
+		mike[x].addEventListener('click', function changePicture(){
+			for(var xx = 0 ; xx < 5 ; xx++) {
+				mike[xx].classList.toggle('mike-picture');
+				h1.textContent = 'Groovy! Mike is where it\'s at!';
+				h1.style.color = '#BDD63A';
+				h1.style.fontWeight = 'bold';
+				h1.style.fontSize = '2.2em';
+				h2.style.visibility = 'hidden';
+			}
+		});
+	}
+	
+	for(var xxx = 0 ; xxx < 5 ; xxx++) {
+		davy[xxx].classList.toggle('davy');
+	}
+}
+
+addDavy();
+addMike();
+
+//addListener(davy, 'davy-picture', 'How fab, it\'s Davy!', davy);
+//addListener(mike, 'mike-picture', 'Groovy! Mike is where it\'s at!', mike);
+//addListener(micky, 'micky-picture', 'Cool! You dig Micky!', micky);
+//addListener(peter, 'peter-picture', 'Man, that\'s Peter!', peter);
+
 // Find a way to reset squares.
-
-addListener(davy, 'davy-picture', 'How fab, it\'s Davy!', davy);
-addListener(mike, 'mike-picture', 'Groovy! Mike is where it\'s at!', mike);
-addListener(micky, 'micky-picture', 'Cool! You dig Micky!', micky);
-addListener(peter, 'peter-picture', 'Man, that\'s Peter!', peter);
-
-
 
 //ARRAY FILTERING
 

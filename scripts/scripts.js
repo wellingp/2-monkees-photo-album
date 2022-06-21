@@ -1,90 +1,122 @@
-
-let davy = document.getElementsByClassName("davy");
-let mike = document.getElementsByClassName("mike");
-let micky = document.getElementsByClassName("micky");
-let peter = document.getElementsByClassName("peter");
-
 let h1 = document.querySelector('h1');
 let h2 = document.querySelector('h2');
 
-//THE ISSUE: THE ARRAY PRODUCED IS NOT A STRING, CAN'T USE STRING METHODS ON IT
+let davy = document.getElementsByClassName("davy");
+let davyArray = Array.from(davy);
 
-//HTML COLLECTION
-//var otherMonkeesClass = document.getElementsByClassName('othertd');
-//NODE LIST
-//var otherMonkeesNodes = document.querySelectorAll('td');
+let mike = document.getElementsByClassName("mike");
+let mikeArray = Array.from(mike);
 
-//console.log(otherMonkeesNodes.innerHTML);
-//ARRAY
-//var otherMonkeesArray = Array.from(otherMonkeesClass);
-//STRING OF HTMLTABLECELLELEMENT
-//var otherMonkeesString = otherMonkeesClass.toString();
+let micky = document.getElementsByClassName("micky");
+let mickyArray = Array.from(micky);
 
-// var resetMonkees = otherMonkeesString.filter(boxtds => boxtds == 'td.davy');
+let peter = document.getElementsByClassName("peter");
+let peterArray = Array.from(peter);
 
-//console.log('otherMonkeesClass', otherMonkeesClass);
-//console.log('otherMonkeesNodes', otherMonkeesNodes);
-//console.log('otherMonkeesArray', otherMonkeesArray);
-//console.log('string: ', otherMonkeesString);
-/*console.log('filtered results:', resetMonkees);*/
-
-
-function addDavy(){
-	for(var i = 0 ; i < 5 ; i++) {
-		davy[i].addEventListener('click', function changePicture(){
-			for(var i = 0 ; i < 5 ; i++) {
-				davy[i].classList.toggle('davy-picture');
+function davyFlip(){
+	davyArray.forEach(item => {
+		item.addEventListener('click', event => {
+			davyArray.forEach(item => {
+				item.classList.toggle('davy-picture');
 				h1.textContent = 'How fab, it\'s Davy!';
-				h1.style.color = '#BDD63A';
+				h1.style.color = '#47A3D2';
 				h1.style.fontWeight = 'bold';
 				h1.style.fontSize = '2.2em';
 				h2.style.visibility = 'hidden';
-			}
-		});
-	}
+			})
 
-	for(var ii = 0 ; ii < 5 ; ii++) {
-		mike[ii].classList.toggle('mike');
-	}
+			mikeArray.forEach(item => {
+				item.className = 'mike';
+			})
+			mickyArray.forEach(item => {
+				item.className = 'micky';
+			})
+			peterArray.forEach(item => {
+				item.className = 'peter';
+			})
+		})
+	})
 }
 
-function addMike(){
-	for(var x = 0 ; x < 5 ; x++) {
-		mike[x].addEventListener('click', function changePicture(){
-			for(var xx = 0 ; xx < 5 ; xx++) {
-				mike[xx].classList.toggle('mike-picture');
+davyFlip();
+
+function mikeFlip(){
+	mikeArray.forEach(item => {
+		item.addEventListener('click', event => {
+			mikeArray.forEach(item => {
+				item.classList.toggle('mike-picture');
 				h1.textContent = 'Groovy! Mike is where it\'s at!';
-				h1.style.color = '#BDD63A';
+				h1.style.color = '#FB7E3E';
 				h1.style.fontWeight = 'bold';
 				h1.style.fontSize = '2.2em';
 				h2.style.visibility = 'hidden';
-			}
-		});
-	}
-	
-	for(var xxx = 0 ; xxx < 5 ; xxx++) {
-		davy[xxx].classList.toggle('davy');
-	}
+			})
+			
+			davyArray.forEach(item => {
+				item.className = 'davy';
+			})
+			mickyArray.forEach(item => {
+				item.className = 'micky';
+			})
+			peterArray.forEach(item => {
+				item.className = 'peter';
+			})
+		})
+	})
 }
 
-addDavy();
-addMike();
+mikeFlip();
 
-//addListener(davy, 'davy-picture', 'How fab, it\'s Davy!', davy);
-//addListener(mike, 'mike-picture', 'Groovy! Mike is where it\'s at!', mike);
-//addListener(micky, 'micky-picture', 'Cool! You dig Micky!', micky);
-//addListener(peter, 'peter-picture', 'Man, that\'s Peter!', peter);
+function mickyFlip(){
+	mickyArray.forEach(item => {
+		item.addEventListener('click', event => {
+			mickyArray.forEach(item => {
+				item.classList.toggle('micky-picture');
+				h1.textContent = 'Cool! You dig Micky!';
+				h1.style.color = '#BED73B';
+				h1.style.fontWeight = 'bold';
+				h1.style.fontSize = '2.2em';
+				h2.style.visibility = 'hidden';
+			})
+			
+			davyArray.forEach(item => {
+				item.className = 'davy';
+			})
+			mikeArray.forEach(item => {
+				item.className = 'mike';
+			})
+			peterArray.forEach(item => {
+				item.className = 'peter';
+			})
+		})
+	})
+}
 
-// Find a way to reset squares.
+mickyFlip();
 
-//ARRAY FILTERING
+function peterFlip(){
+	peterArray.forEach(item => {
+		item.addEventListener('click', event => {
+			peterArray.forEach(item => {
+				item.classList.toggle('peter-picture');
+				h1.textContent = 'Man, that\'s Peter!';
+				h1.style.color = '#FD4638';
+				h1.style.fontWeight = 'bold';
+				h1.style.fontSize = '2.2em';
+				h2.style.visibility = 'hidden';
+			})
+			
+			davyArray.forEach(item => {
+				item.className = 'davy';
+			})
+			mikeArray.forEach(item => {
+				item.className = 'mike';
+			})
+			mickyArray.forEach(item => {
+				item.className = 'micky';
+			})
+		})
+	})
+}
 
-// let experiment = ['td.davy', 'td.davy-picture', 'td.mike', 'td.peter', 'td.micky', 'td.mike-picture', 'td.peter-picture', 'td.micky-picture'];
-
-// //more than 8 characters are the face pictures
-// //less than 8 are the reset
-
-// const result = experiment.filter(word => word.length > 8);
-
-// console.log(result);
-
+peterFlip();

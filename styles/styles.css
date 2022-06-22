@@ -49,7 +49,7 @@ main{
 }
 
 table{
-   width: 50%;
+   width: 90%;
    display: inline-table;
    border-collapse: collapse;
    empty-cells: show;
@@ -76,7 +76,7 @@ td:hover{
 .davy-picture{
    background-color: #d4692c;
    background-image: url(../images/davy-bird.png);
-   background-size: 100%;
+   background-size: cover;
    animation-name: show-davy;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;
@@ -117,7 +117,7 @@ td:hover{
 .mike-picture{
    background-color: #d4692c;
    background-image: url(../images/nez-flower.png);
-   background-size: 100%;
+   background-size: cover;
    animation-name: show-mike;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;
@@ -156,7 +156,7 @@ td:hover{
 .peter-picture{
    background-color: #d4692c;
    background-image: url(../images/peter-shelf.png);
-   background-size: 100%;
+   background-size: cover;
    animation-name: show-peter;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;
@@ -195,7 +195,7 @@ td:hover{
 .micky-picture{
    background-color: #d4692c;
    background-image: url(../images/micky-balloon.png);
-   background-size: 100%;
+   background-size: cover;
    animation-name: show-micky;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;

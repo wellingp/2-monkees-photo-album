@@ -14,42 +14,18 @@ body{
    font-family: 'Source Serif Pro', serif;
 }
 
-button, main, h1{
-   margin-bottom: 2%;
-}
-
-.container{
-
-}
-
-.row{
-
-}
-
-.col{
-
-}
-
-header{
-
-}
-
 #logo{
-   max-width: 100%;
+   max-width: 70%;
    height: auto;
    margin-bottom: 0;
 }
 
-main{
-
-}
-
-#collector-box{
-   
+#top-banner{
+   max-width: 100%;
 }
 
 table{
-   width: 90%;
+   width: 60%;
    display: inline-table;
    border-collapse: collapse;
    empty-cells: show;
@@ -69,37 +45,35 @@ td:hover{
 
 .davy{
    background-color: #d4692c;
-   background-image: url(../images/davy-bird.png);
+   background-image: url(../images/davy-bird.jpg);
    background-size: 100%;
 }
 
 .davy-picture{
    background-color: #d4692c;
-   background-image: url(../images/davy-bird.png);
+   background-image: url(../images/davy-bird.jpg);
    background-size: cover;
    animation-name: show-davy;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;
 }
 
-/*Maybe try adding a flip effect when the square is clicked???*/
-
 @keyframes show-davy{
    
    0%{
-      background-image: url(../images/davy-bird.png);
+      background-image: url(../images/davy-bird.jpg);
       opacity: 100%;
    }
    25%{
-      background-image: url(../images/davy-bird.png);
+      background-image: url(../images/davy-bird.jpg);
       opacity: 75%;
    }
    50%{
-      background-image: url(../images/davy-bird.png);
+      background-image: url(../images/davy-bird.jpg);
       opacity: 50%;
    }
    75%{
-      background-image: url(../images/davy-bird.png);
+      background-image: url(../images/davy-bird.jpg);
       opacity: 25%;
    }
    100%{
@@ -109,36 +83,35 @@ td:hover{
 
 .mike{
    background-color: #c18959;
-   background-image: url(../images/nez-flower.png);
+   background-image: url(../images/nez-flower.jpg);
    background-size: 100%;
    color: #FB7E3E;
 }
 
 .mike-picture{
    background-color: #d4692c;
-   background-image: url(../images/nez-flower.png);
+   background-image: url(../images/nez-flower.jpg);
    background-size: cover;
    animation-name: show-mike;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;
 }
 
-@keyframes show-mike{
-   
+@keyframes show-mike{  
    0%{
-      background-image: url(../images/nez-flower.png);
+      background-image: url(../images/nez-flower.jpg);
       opacity: 100%;
    }
    25%{
-      background-image: url(../images/nez-flower.png);
+      background-image: url(../images/nez-flower.jpg);
       opacity: 75%;
    }
    50%{
-      background-image: url(../images/nez-flower.png);
+      background-image: url(../images/nez-flower.jpg);
       opacity: 50%;
    }
    75%{
-      background-image: url(../images/nez-flower.png);
+      background-image: url(../images/nez-flower.jpg);
       opacity: 25%;
    }
    100%{
@@ -148,14 +121,14 @@ td:hover{
 
 .peter{
    background-color: #462210;
-   background-image: url(../images/peter-shelf.png);
+   background-image: url(../images/peter-shelf.jpg);
    background-size: 100%;
    color: #F4EB37;
 }
 
 .peter-picture{
    background-color: #d4692c;
-   background-image: url(../images/peter-shelf.png);
+   background-image: url(../images/peter-shelf.jpg);
    background-size: cover;
    animation-name: show-peter;
    animation-duration: 0.5s;
@@ -163,21 +136,20 @@ td:hover{
 }
 
 @keyframes show-peter{
-   
    0%{
-      background-image: url(../images/peter-shelf.png);
+      background-image: url(../images/peter-shelf.jpg);
       opacity: 100%;
    }
    25%{
-      background-image: url(../images/peter-shelf.png);
+      background-image: url(../images/peter-shelf.jpg);
       opacity: 75%;
    }
    50%{
-      background-image: url(../images/peter-shelf.png);
+      background-image: url(../images/peter-shelf.jpg);
       opacity: 50%;
    }
    75%{
-      background-image: url(../images/peter-shelf.png);
+      background-image: url(../images/peter-shelf.jpg);
       opacity: 25%;
    }
    100%{
@@ -187,14 +159,14 @@ td:hover{
 
 .micky{
    background-color: #8F2728;
-   background-image: url(../images/micky-balloon.png);
+   background-image: url(../images/micky-bee.jpg);
    background-size: 100%;
    color: #BDD63A;
 }
 
 .micky-picture{
    background-color: #d4692c;
-   background-image: url(../images/micky-balloon.png);
+   background-image: url(../images/micky-bee.jpg);
    background-size: cover;
    animation-name: show-micky;
    animation-duration: 0.5s;
@@ -204,19 +176,19 @@ td:hover{
 @keyframes show-micky{
    
    0%{
-      background-image: url(../images/micky-balloon.png);
+      background-image: url(../images/micky-bee.jpg);
       opacity: 100%;
    }
    25%{
-      background-image: url(../images/micky-balloon.png);
+      background-image: url(../images/micky-bee.jpg);
       opacity: 75%;
    }
    50%{
-      background-image: url(../images/micky-balloon.png);
+      background-image: url(../images/micky-bee.jpg);
       opacity: 50%;
    }
    75%{
-      background-image: url(../images/micky-balloon.png);
+      background-image: url(../images/micky-bee.jpg);
       opacity: 25%;
    }
    100%{
@@ -224,12 +196,9 @@ td:hover{
    }
 }
 
-.reset{
-
-}
-
 footer{
-
+   padding: 5%;
+   font-size: 1.2em;
 }
 
 img{
@@ -237,30 +206,17 @@ img{
    max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6{
-
+h1, h2{
+   color: #E13887;
 }
 
 h1{
-
-}
-
-h2{
+   font-size: 3em;
+   margin-bottom: 5%;
+   font-family: 'Grandstander', cursive;
    font-weight: bold;
 }
 
-h3{
-
-}
-
-h4{
-
-}
-
-h5{
-
-}
-
-h6{
-
+h2{
+   margin-top: 0;
 }
